@@ -16,8 +16,8 @@ This suite automates the following processes:
   Combines intelligent Google search with browser automation to identify and download **pricing PDFs** directly from provider websites.  
   If no PDF is found, the tool captures a **visual snapshot** of relevant pricing content for reference.
 
-- ✅ **Star Rating Collection**
-  Programmatically extracts publicly available star ratings and quality metrics from agedcarequality.gov.au, ready for integration into dashboards or analytics workflows.
+- ✅ **Star Rating Collection**  
+  Programmatically extracts publicly available **star ratings** and quality metrics from agedcarequality.gov.au, ready for integration into dashboards or analytics workflows.
 
 - ✅ **Automated Logging to Google Sheets**  
   All provider details, report links, and outcomes are recorded into a structured Google Sheet — no manual copy-pasting required.
