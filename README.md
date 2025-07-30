@@ -1,90 +1,41 @@
-# aged-care-automation
-🧠 Aged Care Automation Suite
-This project automates four key data collection tasks from public Australian aged care sources:
+# 🧠 Aged Care Automation Suite
 
-✅ Extracting government star ratings
+A Python-based solution to streamline the collection of public aged care data from government and provider websites.  
+It helps reduce manual effort by programmatically gathering, extracting, and logging useful provider information.
 
-✅ Downloading compliance reports in .docx format
+---
 
-✅ Locating and downloading home care pricing PDFs
+## 🔍 What It Does
 
-✅ Logging everything automatically to a Google Sheet
+This suite automates the following processes:
 
-⚙️ Technologies Used
-Python + Playwright (headless browser automation)
+- ✅ **Compliance Report Downloads**  
+  Automatically fetches `.docx` compliance reports from government service pages based on provider info.
 
-Google Sheets API (for central logging)
+- ✅ **Pricing Document Discovery**  
+  Uses Google search and browser automation to locate downloadable **pricing PDFs** from provider websites.  
+  If not found, it saves a **page snapshot** for reference.
 
-SerpAPI (intelligent Google fallback for pricing)
+- ✅ **Star Rating Extraction** *(if included)*  
+  Collects provider-level performance ratings from agedcarequality.gov.au (modular).
 
-requests, pandas, BeautifulSoup
+- ✅ **Structured Google Sheet Logging**  
+  All relevant metadata and links are logged directly into a connected Google Sheet for easy access and record-keeping.
 
-🗂️ Project Structure
-bash
-Copy
-Edit
-AGED_CARE_AUTOMATION/
-├── data/                    # Input CSVs (provider lists)
-├── downloads/              # Saved compliance reports, PDFs, screenshots
-├── scripts/
-│   ├── download_compliance_report.py  # Automates .docx compliance downloads
-│   ├── pricing_finder.py              # Finds pricing via smart Google search
-│   └── [other automation modules]
-├── credentials/            # Place your Google credentials here (gitignored)
-├── .env                    # Your local API keys (gitignored)
-├── .env.template           # Safe template for others
-├── .gitignore
-└── README.md
-🔐 Setup Instructions
-⚠️ Required before running: Python 3.10+ and Chrome/Edge installed
+---
 
-1. Clone the Repo
-bash
-Copy
-Edit
-git clone https://github.com/deku-3/aged-care-automation.git
-cd aged-care-automation
-2. Install Requirements
-bash
-Copy
-Edit
+## ⚙️ Technology
+
+- Python + Playwright for browser automation  
+- Google Sheets API for real-time logging  
+- SerpAPI for intelligent Google fallback  
+- Requests, Pandas, and BeautifulSoup for parsing and data handling
+
+---
+
+## 🔐 Setup
+
+### 1. Install dependencies
+
+```bash
 pip install -r requirements.txt
-3. Configure Environment Variables
-Copy the environment template:
-
-bash
-Copy
-Edit
-cp .env.template .env
-Fill in your .env with:
-
-Your SerpAPI key
-
-Your Google Sheet ID
-
-Your path to credentials.json
-
-4. Place Your Google Credentials
-Save your Google service account file as:
-
-bash
-Copy
-Edit
-credentials/credentials.json
-5. Run the Automations
-Each script can be run independently:
-
-bash
-Copy
-Edit
-# Download .docx compliance reports for top 30 providers
-python scripts/download_compliance_report.py
-
-# Fetch pricing PDFs using Google + Playwright
-python scripts/pricing_finder.py
-You can customize which providers to target by editing the CSVs in the data/ folder.
-
-📊 Output
-📁 downloads/: All scraped files, PDFs, and screenshots
-
-📄 Google Sheet: Logs provider, suburb, postcode, and source URL
