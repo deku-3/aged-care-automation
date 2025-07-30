@@ -1,6 +1,6 @@
 # 🧠 Aged Care Automation Suite
 
-A Python-based solution to streamline the collection of public aged care data from government and provider websites.  
+A Python-based automated solution to streamline the collection of public aged care data from government and provider websites.  
 It helps reduce manual effort by programmatically gathering, extracting, and logging useful provider information.
 
 ---
@@ -9,18 +9,18 @@ It helps reduce manual effort by programmatically gathering, extracting, and log
 
 This suite automates the following processes:
 
-- ✅ **Compliance Report Downloads**  
-  Automatically fetches `.docx` compliance reports from government service pages based on provider info.
+- ✅ **Compliance Report Retrieval**  
+  Seamlessly locates and downloads official `.docx` compliance reports from government service directories using provider-specific search parameters.
 
-- ✅ **Pricing Document Discovery**  
-  Uses Google search and browser automation to locate downloadable **pricing PDFs** from provider websites.  
-  If not found, it saves a **page snapshot** for reference.
+- ✅ **Smart Pricing Discovery**  
+  Combines intelligent Google search with browser automation to identify and download **pricing PDFs** directly from provider websites.  
+  If no PDF is found, the tool captures a **visual snapshot** of relevant pricing content for reference.
 
-- ✅ **Star Rating Extraction** *(if included)*  
-  Collects provider-level performance ratings from agedcarequality.gov.au (modular).
+- ✅ **Star Rating Collection**
+  Programmatically extracts publicly available star ratings and quality metrics from agedcarequality.gov.au, ready for integration into dashboards or analytics workflows.
 
-- ✅ **Structured Google Sheet Logging**  
-  All relevant metadata and links are logged directly into a connected Google Sheet for easy access and record-keeping.
+- ✅ **Automated Logging to Google Sheets**  
+  All provider details, report links, and outcomes are recorded into a structured Google Sheet — no manual copy-pasting required.
 
 ---
 
@@ -32,6 +32,9 @@ This suite automates the following processes:
 - Requests, Pandas, and BeautifulSoup for parsing and data handling
 
 ---
+| 📄 Compliance Report (.docx) | 📑 Pricing PDF (auto-located) |
+|-----------------------------|-------------------------------|
+| ![docx screenshot](assets/pricing_docx.png) | ![pdf screenshot](assets/pricing_pdf.png) |
 
 ## 🔐 Setup
 
