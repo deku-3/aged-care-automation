@@ -1,0 +1,6 @@
+# Ignore secrets and credentials
+.env
+credentials.json
+# OS metadata
+.DS_Store
+Thumbs.db
