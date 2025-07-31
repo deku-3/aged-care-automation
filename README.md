@@ -1,5 +1,5 @@
 # 🧠 Aged Care Automation Suite
-
+> ⚡ Built to power the **data pipeline for training a Healthcare AI**  
 A Python-based automated solution to streamline the collection of public aged care data from government and provider websites.  
 It helps reduce manual effort by programmatically gathering, extracting, and logging useful provider information.
 
